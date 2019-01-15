@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Eareka-service
+
+server:
+  port: ${PORT:8060}
+
+eureka:
+  instance:
+    ip-address: 172.16.18.177
+    prefer-ip-address: false
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    waitTimeInMsWhenSyncEmpty: 0
+    serviceUrl:
+      defaultZone: http://127.0.0.1:${server.port}/eureka/
